@@ -1,0 +1,14 @@
+[Unit]
+Description=Geth Node
+After=network.target
+
+[Service]
+ExecStart=/home/ubuntu/hacknet-geth/run-sealer.sh
+User=ubuntu
+Group=ubuntu
+Restart=on-failure
+WorkingDirectory=/home/ubuntu/hacknet-geth/
+KillSignal=SIGHUP
+
+[Install]
+WantedBy=multi-user.target
